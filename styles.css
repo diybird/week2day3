@@ -1,0 +1,111 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ffc0cb; 
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 5px solid #ff69b4; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ff69b4; 
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff1493; 
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #ff69b4; 
+}
+
+.rabbit-card {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff; 
+    border: 2px solid #ff69b4; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rabbit-image {
+    width: 100px; 
+    height: 100px; 
+    margin-bottom: 10px;
+    border: 2px solid #ff69b4; 
+    border-radius: 50%; 
+}
+
+.rabbit-tag {
+    font-weight: bold;
+    color: #ff69b4; 
+
+   
+}
+
+
+.rabbit-card {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; 
+}
+
+.rabbit-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+
+/* Pseudo-element for the gradient border */
+.rabbit-card:hover::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    border-radius: 15px; 
+    z-index: -1;
+}
+
+.rabbit-card:hover .rabbit-image {
+    transform: scale(1.15); /* Make the image 15% bigger on hover */
+    background-color: yellow; /* Change background color to yellow on hover */
+    border: 2px solid transparent; /* Hide the border on hover */
+    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); /* Rainbow gradient border on hover */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
